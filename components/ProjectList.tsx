@@ -15,7 +15,13 @@ const projects = [
     title: "Cognify",
     desc: "- Chief Technology Officer - Cognify is a new-age Learning Management System (LMS) designed to empower teachers and students by removing friction, not adding it. Teachers can focus on teaching while we handle the rest. This AI-enhanced platform ships with auto-grading, grammer-checking, reminding students of due dates, tutor assistant, anti-cheat, and much more.",
     projectLink: "https://www.cognify.sh/",
-    stack: ["typescript", "nextjs", "supabase", "tailwind"],
+    stack: ["typescript", "nextjs", "supabase", "nestjs", "tailwind"],
+  },
+  {
+    title: "Plant Detective",
+    desc: "Utilizes Computer vision AI to classify different types of plants. Planet detective allows users to examine the greenery around them, allowing users to identify poisonous plants or simply satisfy their curiosity. This won me 1st place in my highschool STEM fair competition. I learned how to utilize pytorch to train a model to classify images.",
+    githubLink: "https://github.com/Zero2Hero123/plant-detective",
+    stack: ["python", "pytorch"],
   },
   {
     title: "Connect 4 But Better",

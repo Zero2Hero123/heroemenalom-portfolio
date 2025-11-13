@@ -11,15 +11,27 @@ export default function Navbar() {
           whileHover={{ scale: 1.1 }}
           className="text-white font-bold hover:cursor-pointer text-xl "
         >
-          <Link href="#">{"<HE />"}</Link>
+          <motion.a whileHover={{}} href="#">
+            {"<HE />"}
+          </motion.a>
         </motion.div>
 
-        <div className="text-white flex justify-center grow gap-5">
-          <Link href="#about">About</Link>
-          <Link href="#experience">Experience</Link>
-          <Link href="#projects">Projects</Link>
-          <Link href="#skills">Skills</Link>
-          <Link href="#contacts">Contact</Link>
+        <div className="text-white flex justify-center grow gap-5 font-inter font-extralight">
+          <motion.a whileHover={{ scale: 1.1 }} href="#about">
+            About
+          </motion.a>
+          <motion.a whileHover={{ scale: 1.1 }} href="#experience">
+            Experience
+          </motion.a>
+          <motion.a whileHover={{ scale: 1.1 }} href="#projects">
+            Projects
+          </motion.a>
+          <motion.a whileHover={{ scale: 1.1 }} href="#skills">
+            Skills
+          </motion.a>
+          <motion.a whileHover={{ scale: 1.1 }} href="#contacts">
+            Contact
+          </motion.a>
         </div>
       </nav>
     </>

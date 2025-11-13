@@ -20,7 +20,15 @@ const techStack = {
   typescript: await import("../assets/typescript.logo.png"),
   postgresql: await import("../assets/postgresql.logo.png"),
   react: await import("../assets/react.logo.png"),
+  graphql: await import("../assets/graphql.logo.png"),
+  nestjs: await import("../assets/nestjs.logo.svg"),
   socketio: await import("../assets/socketio.logo.png"),
+  firebase: await import("../assets/firebase.logo.png"),
+  googlecloud: await import("../assets/gcp.logo.png"),
+  awsS3: await import("../assets/s3.logo.svg"),
+  python: await import("../assets/python.logo.png"),
+  pytorch: await import("../assets/pytorch.logo.png"),
+  java: await import("../assets/java.logo.png"),
 };
 
 interface Props {
@@ -43,8 +51,11 @@ export default function ProjectCard({
   return (
     <motion.div
       initial={{ x: isEven ? -1000 : 1000 }}
-      transition={{ duration: 1.5, type: "spring" }}
-      whileInView={{ x: isEven ? 0 : 400 }}
+      transition={{
+        duration: 1.5,
+        type: "spring",
+      }}
+      whileInView={{ x: isEven ? 0 : 400, fill: "forwards" }}
     >
       <Card className="relative hover:cursor-pointer bg-zinc-900 w-[60%] h-78 shadow-2xl shadow-slate-800 hover:shadow-slate-700 transition-shadow border-none">
         <CardHeader>
