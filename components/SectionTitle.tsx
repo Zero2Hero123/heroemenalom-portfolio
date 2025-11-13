@@ -14,7 +14,7 @@ export default function SectionTitle({ title, sectionId }: Props) {
       initial={{ opacity: 0, x: -10 }}
       whileInView={{ opacity: 100, x: 0 }}
       transition={{ duration: 1 }}
-      className="text-5xl flex justify-center"
+      className="text-5xl flex justify-center text-center"
     >
       {title}
     </motion.div>

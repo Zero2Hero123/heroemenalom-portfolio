@@ -18,7 +18,7 @@ export default function Terminal() {
         }}
         whileHover={{ scale: 1.05 }}
         initial={{ scale: 1 }}
-        className="text-[1vw] shadow-xl shadow-zinc-800 hover:cursor-pointer rounded-md flex flex-col items-center justify-start bg-zinc-900 aspect-[16/7] scale-80 md:scale-none md:w-[60%] md:min-w-[500px]"
+        className="md:text-[1vw] shadow-xl shadow-zinc-800 hover:cursor-pointer rounded-md flex flex-col items-center justify-start bg-zinc-900 aspect-[16/7] scale-80 md:scale-none md:w-[60%] md:min-w-[500px]"
       >
         <div className="basis-10 w-full   text-white flex justify-center items-center">
           About Me

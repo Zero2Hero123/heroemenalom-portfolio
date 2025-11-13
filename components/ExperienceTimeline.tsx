@@ -1,8 +1,9 @@
 "use client";
 import { motion } from "motion/react";
 import ProjectCard from "./ProjectCard";
+import type { ProjectCardClass, Stack } from "./ProjectCard";
 
-const experiences = [
+const experiences: Omit<ProjectCardClass, "isEven">[] = [
   {
     title: "Tintype",
     desc: "- Software Engineer Intern - Designed backend API endpoints to interact with frontend. Programmed 40+ LLM tools for frontend AI assistant to automate tasks on user's behalf. Established scalable storage of user files with S3 buckets.",

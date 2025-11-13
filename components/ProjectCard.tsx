@@ -31,12 +31,14 @@ const techStack = {
   java: await import("../assets/java.logo.png"),
 };
 
-interface Props {
+export type Stack = keyof typeof techStack;
+
+export interface ProjectCardClass {
   title: string;
   desc: string;
   projectLink?: string;
   githubLink?: string;
-  stack: (keyof typeof techStack)[];
+  stack: Stack[];
   isEven: boolean;
 }
 
@@ -47,21 +49,21 @@ export default function ProjectCard({
   githubLink,
   isEven,
   stack,
-}: Props) {
+}: ProjectCardClass) {
   return (
     <motion.div
-      initial={{ x: isEven ? -500 : 500 }}
+      initial={{ x: isEven ? -50 : 50 }}
       transition={{
         duration: 1.5,
         type: "spring",
       }}
       whileInView={{ x: 0, fill: "forwards" }}
-      className=" h-fit w-full flex flex-col justify-center items-center my-10"
+      className="h-fit w-full flex flex-col justify-center items-center my-10"
     >
-      <Card className="text-[2vh] relative hover:cursor-pointer bg-zinc-900 w-[60%] min-w-44 aspect-5/2 shadow-2xl shadow-slate-800 hover:shadow-slate-700 transition-shadow border-none">
+      <Card className="text-sm md:text-[2vh] relative hover:cursor-pointer bg-zinc-900 w-[60%] min-w-44 aspect-5/2 shadow-2xl shadow-slate-800 hover:shadow-slate-700 transition-shadow border-none">
         <CardHeader>
           <CardTitle>
-            <span className="text-[3vh] font-inter font-light italic">
+            <span className="text-3xl md:text-[3vh] font-inter font-light italic">
               {title}
             </span>
           </CardTitle>
@@ -108,7 +110,7 @@ export default function ProjectCard({
                   alt={stack}
                   width={36}
                   height={36}
-                  className="w-[2vw]"
+                  className="md:w-[2vw]"
                 />
               </TooltipTrigger>
               <TooltipContent className="transition-all">

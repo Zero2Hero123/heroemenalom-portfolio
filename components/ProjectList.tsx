@@ -2,8 +2,9 @@
 import { motion } from "motion/react";
 import ProjectCard from "./ProjectCard";
 import { stack } from "three/src/nodes/TSL.js";
+import type { ProjectCardClass } from "./ProjectCard";
 
-const projects = [
+const projects: Omit<ProjectCardClass, "isEven">[] = [
   {
     title: "RosterPro",
     desc: "Utilizes OpenAI's API to generate weekly schedules that fit every workers availability and time-off. This solution helped my church organize our team more efficiently and reduce our sunday prep-time by 70%. Futhermore, it generated 50+ users as it was shared with neighboring branches. I learned how to integrate OpenAI's API in addition to other LLMs to create an enhanced user-experience.",
