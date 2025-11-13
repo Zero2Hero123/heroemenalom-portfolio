@@ -8,7 +8,7 @@ import {
   CardFooter,
 } from "./ui/card";
 import Link from "next/link";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Youtube } from "lucide-react";
 import { motion } from "motion/react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import Image from "next/image";
@@ -38,6 +38,7 @@ export interface ProjectCardClass {
   desc: string;
   projectLink?: string;
   githubLink?: string;
+  youtubeLink?: string;
   stack: Stack[];
   isEven: boolean;
 }
@@ -47,6 +48,7 @@ export default function ProjectCard({
   desc,
   projectLink,
   githubLink,
+  youtubeLink,
   isEven,
   stack,
 }: ProjectCardClass) {
@@ -69,6 +71,20 @@ export default function ProjectCard({
           </CardTitle>
           <div className="flex flex-row-reverse justify-start gap-2">
             <CardAction>
+              {youtubeLink && (
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Link href={youtubeLink} target="_blank">
+                      <Youtube />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent className=" transition-all animate-bounce">
+                    View on YT
+                  </TooltipContent>
+                </Tooltip>
+              )}
+            </CardAction>
+            <CardAction>
               {projectLink && (
                 <Tooltip>
                   <TooltipTrigger>
@@ -82,6 +98,7 @@ export default function ProjectCard({
                 </Tooltip>
               )}
             </CardAction>
+
             <CardAction>
               {githubLink && (
                 <Tooltip>

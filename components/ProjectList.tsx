@@ -10,6 +10,7 @@ const projects: Omit<ProjectCardClass, "isEven">[] = [
     desc: "Utilizes OpenAI's API to generate weekly schedules that fit every workers availability and time-off. This solution helped my church organize our team more efficiently and reduce our sunday prep-time by 70%. Futhermore, it generated 50+ users as it was shared with neighboring branches. I learned how to integrate OpenAI's API in addition to other LLMs to create an enhanced user-experience.",
     githubLink: "https://github.com/Zero2Hero123/RosterPro",
     projectLink: "https://rosterprofessional.vercel.app/",
+    youtubeLink: "https://www.youtube.com/watch?v=oQnOuMSG2ng&t=17s",
     stack: ["typescript", "nextjs", "supabase", "postgresql", "tailwind"],
   },
   {
