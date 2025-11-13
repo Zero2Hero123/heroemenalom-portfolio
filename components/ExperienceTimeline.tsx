@@ -22,7 +22,7 @@ const experiences = [
 export default function ExperienceTimeline() {
   return (
     <>
-      <motion.div className="w-full flex flex-col gap-10 overflow-x-hidden">
+      <motion.div className="w-full flex flex-col gap-10 overflow-x-hidden ">
         {experiences.map((project, index) => (
           <ProjectCard isEven={index % 2 == 0} key={index} {...project!} />
         ))}
