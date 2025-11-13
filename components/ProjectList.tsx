@@ -35,7 +35,7 @@ const projects = [
 export default function ProjectList() {
   return (
     <>
-      <motion.div className="w-full flex flex-col gap-10 overflow-x-hidden">
+      <motion.div className="w-full flex flex-col md:gap-10 overflow-x-hidden">
         {projects.map((project, index) => (
           <ProjectCard isEven={index % 2 == 0} key={index} {...project!} />
         ))}

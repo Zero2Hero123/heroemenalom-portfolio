@@ -10,7 +10,10 @@ import ContactMe from "@/components/ContactMe";
 
 export default function Home() {
   return (
-    <div className="text-white flex flex-col gap-5 min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div
+      id="about"
+      className="text-white flex flex-col gap-5 min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black"
+    >
       <header>
         <Header />
       </header>
@@ -23,12 +26,12 @@ export default function Home() {
         <SkillsShowcase />
       </section>
 
-      <section className="w-full px-16 pt-10 flex flex-col gap-5">
+      <section className="w-full pt-10 flex flex-col gap-5">
         <SectionTitle sectionId="projects" title="Featured Projects" />
         <ProjectList />
       </section>
 
-      <section className="w-full px-16 pt-10 flex flex-col gap-5">
+      <section className="w-full pt-10 flex flex-col gap-5">
         <SectionTitle sectionId="experience" title="Experience" />
         <ExperienceTimeline />
       </section>

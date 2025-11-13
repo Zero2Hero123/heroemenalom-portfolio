@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 const experiences = [
   {
     title: "Tintype",
-    desc: "Software Engineer Intern",
+    desc: "- Software Engineer Intern - Designed backend API endpoints to interact with frontend. Programmed 40+ LLM tools for frontend AI assistant to automate tasks on user's behalf. Established scalable storage of user files with S3 buckets.",
     projectLink: "https://www.trytintype.io/",
     stack: [
       "typescript",
