@@ -10,11 +10,13 @@ import {
   NavigationMenuLink,
 } from "./ui/navigation-menu";
 import { Menu } from "lucide-react";
+import { usePostHog } from "posthog-js/react";
 
 const resumeUrl =
   "https://fgcgrdzotvussnddseta.supabase.co/storage/v1/object/public/assets/Hero_Resume_Official.pdf";
 
 export default function Navbar() {
+  const postHog = usePostHog();
   return (
     <>
       <nav className="sticky z-20 shadow-black shadow-2xl top-0 flex items-center justify-center md:justify-between gap-5 md:gap-0 w-full px-4 py-2 bg-white dark:bg-black">
@@ -80,7 +82,11 @@ export default function Navbar() {
                       <motion.a href="#contact">Contact</motion.a>
                     </NavigationMenuLink>
                     <NavigationMenuLink>
-                      <motion.a href={resumeUrl} target="_blank">
+                      <motion.a
+                        onClick={() => postHog.capture("resume_viewed", {})}
+                        href={resumeUrl}
+                        target="_blank"
+                      >
                         Resume
                       </motion.a>
                     </NavigationMenuLink>
