@@ -62,7 +62,7 @@ export default function ProjectCard({
       whileInView={{ x: 0, fill: "forwards" }}
       className="h-fit w-full flex flex-col justify-center items-center my-10"
     >
-      <Card className="text-sm md:text-[2vh] relative hover:cursor-pointer bg-zinc-900 w-[60%] min-w-44 aspect-5/2 shadow-2xl shadow-slate-800 hover:shadow-slate-700 transition-shadow border-none">
+      <Card className="text-sm md:text-md relative hover:cursor-pointer bg-zinc-900 w-[60%] min-w-44 aspect-5/2 shadow-2xl shadow-slate-800 hover:shadow-slate-700 transition-shadow border-none">
         <CardHeader>
           <CardTitle>
             <span className="text-3xl md:text-[3vh] font-inter font-light italic">
